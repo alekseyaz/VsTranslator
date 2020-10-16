@@ -70,7 +70,7 @@
         <!--移动至 CommandPlacements -->
       </Group>
 
-      <Group guid="guidVsTranslatorPackageCmdSet" id="TranslatorTtsSubGroup" priority="0x0604"></Group>
+      <!--<Group guid="guidVsTranslatorPackageCmdSet" id="TranslatorTtsSubGroup" priority="0x0604"></Group>-->
 
       <Group guid="guidVsTranslatorPackageCmdSet" id="TranslatorOptionSubGroup" priority="0x0605"></Group>
 
@@ -99,42 +99,6 @@
           <ToolTipText>Google Translate</ToolTipText>
         </Strings>
       </Button>
-      <Button guid="guidVsTranslatorPackageCmdSet" id="BingTranslate" priority="0x0101" type="Button">
-        <Parent guid="guidVsTranslatorPackageCmdSet" id="TranslatorMenuGroup" />
-        <!--<Icon guid="guidTranslateIcon" id="googleIcon"  />-->
-        <Strings>
-          <CommandName>Bing Translate</CommandName>
-          <ButtonText>Bing Translate</ButtonText>
-          <ToolTipText>Bing Translate</ToolTipText>
-        </Strings>
-      </Button>
-      <Button guid="guidVsTranslatorPackageCmdSet" id="BaiduTranslate" priority="0x0102" type="Button">
-        <Parent guid="guidVsTranslatorPackageCmdSet" id="TranslatorMenuGroup" />
-        <!--<Icon guid="guidTranslateIcon" id="googleIcon" />-->
-        <Strings>
-          <CommandName>Baidu Translate</CommandName>
-          <ButtonText>Baidu Translate</ButtonText>
-          <ToolTipText>Baidu Translate</ToolTipText>
-        </Strings>
-      </Button>
-      <Button guid="guidVsTranslatorPackageCmdSet" id="YoudaoTranslate" priority="0x0103" type="Button">
-        <Parent guid="guidVsTranslatorPackageCmdSet" id="TranslatorMenuGroup" />
-        <!--<Icon guid="guidTranslateIcon" id="googleIcon" />-->
-        <Strings>
-          <CommandName>Youdao Translate</CommandName>
-          <ButtonText>Youdao Translate</ButtonText>
-          <ToolTipText>Youdao  Translate</ToolTipText>
-        </Strings>
-      </Button>
-
-      <Button guid="guidVsTranslatorPackageCmdSet" id="TextToSpeech" priority="0x0110" type="Button">
-        <Parent guid="guidVsTranslatorPackageCmdSet" id="TranslatorTtsSubGroup" />
-        <Strings>
-          <CommandName>Text To Speech</CommandName>
-          <ButtonText>Text To Speech</ButtonText>
-          <ToolTipText>Text To Speech</ToolTipText>
-        </Strings>
-      </Button>
 
       <Button guid="guidVsTranslatorPackageCmdSet" id="TranslateOptions" priority="0x0104" type="Button">
         <Parent guid="guidVsTranslatorPackageCmdSet" id="TranslatorOptionSubGroup" />
@@ -142,15 +106,6 @@
           <CommandName>Translate Options</CommandName>
           <ButtonText>Translate Options</ButtonText>
           <ToolTipText>Translate Options</ToolTipText>
-        </Strings>
-      </Button>
-
-      <Button guid="guidVsTranslatorPackageCmdSet" id="TranslateClient" priority="0x0105" type="Button">
-        <Parent guid="guidVsTranslatorPackageCmdSet" id="TranslatorOptionSubGroup" />
-        <Strings>
-          <CommandName>Built-in Translate Client</CommandName>
-          <ButtonText>Built-in Translate Client</ButtonText>
-          <ToolTipText>Built-in Translate Client</ToolTipText>
         </Strings>
       </Button>
 
@@ -201,10 +156,6 @@
     </CommandPlacement>
     <!-- 父节点为菜单栏 -->
     <CommandPlacement guid="guidVsTranslatorPackageCmdSet" id="TranslatorHelpMenuGroup" priority="0x0606">
-      <Parent guid="guidVsTranslatorPackageCmdSet" id="TranslatorMenu"/>
-    </CommandPlacement>
-    <!-- 父节点为菜单栏 -->
-    <CommandPlacement guid="guidVsTranslatorPackageCmdSet" id="TranslatorTtsSubGroup" priority="0x0604">
       <Parent guid="guidVsTranslatorPackageCmdSet" id="TranslatorMenu"/>
     </CommandPlacement>
     <!-- 父节点为菜单栏 -->
@@ -264,14 +215,6 @@
 
   <KeyBindings>
     <KeyBinding guid="guidVsTranslatorPackageCmdSet" id="GoogleTranslate" editor="guidVSStd97" key1="D" mod1="CONTROL Shift"  key2="D" mod2="CONTROL Shift"/>
-    <KeyBinding guid="guidVsTranslatorPackageCmdSet" id="BingTranslate" editor="guidVSStd97" key1="D" mod1="CONTROL Shift"  key2="F" mod2="CONTROL Shift"/>
-    <KeyBinding guid="guidVsTranslatorPackageCmdSet" id="BaiduTranslate" editor="guidVSStd97"  key1="D" mod1="CONTROL Shift"  key2="C" mod2="CONTROL Shift"/>
-    <KeyBinding guid="guidVsTranslatorPackageCmdSet" id="YoudaoTranslate" editor="guidVSStd97"  key1="D" mod1="CONTROL Shift"  key2="V" mod2="CONTROL Shift"/>
-    <KeyBinding guid="guidVsTranslatorPackageCmdSet" id="TranslateOptions" editor="guidVSStd97"  key1="D" mod1="CONTROL Shift"  key2="S" mod2="CONTROL Shift"/>
-    <KeyBinding guid="guidVsTranslatorPackageCmdSet" id="TranslateClient" editor="guidVSStd97"  key1="D" mod1="CONTROL Shift"  key2="X" mod2="CONTROL Shift"/>
-    <KeyBinding guid="guidVsTranslatorPackageCmdSet" id="TranslateInWebSite" editor="guidVSStd97"  key1="D" mod1="CONTROL Shift"  key2="W" mod2="CONTROL Shift"/>
-    <KeyBinding guid="guidVsTranslatorPackageCmdSet" id="DownloadInWebSite" editor="guidVSStd97"  key1="D" mod1="CONTROL Shift"  key2="P" mod2="CONTROL Shift"/>
-    <KeyBinding guid="guidVsTranslatorPackageCmdSet" id="TextToSpeech" editor="guidVSStd97"  key1="D" mod1="CONTROL Shift"  key2="Z" mod2="CONTROL Shift"/>
   </KeyBindings>
 
   <Symbols>
@@ -284,11 +227,7 @@
       <IDSymbol name="TranslatorMenu" value="0x1020" />
       <IDSymbol name="TranslatorMenuGroup" value="0x1021" />
       <IDSymbol name="GoogleTranslate" value="0x1022" />
-      <IDSymbol name="BingTranslate" value="0x1023" />
-      <IDSymbol name="BaiduTranslate" value="0x1024" />
-      <IDSymbol name="YoudaoTranslate" value="0x1025" />
       <IDSymbol name="TranslateOptions" value="0x1026" />
-      <IDSymbol name="TranslateClient" value="0x1027" />
       <!-- translate help  -->
       <IDSymbol name="TranslatorHelpSubMenu" value="0x1028"/>
       <IDSymbol name="TranslatorHelpSubGroup" value="0x1029"/>
@@ -297,8 +236,6 @@
       <IDSymbol name="TranslatorCheckSubGroup" value="0x1032"/>
       <IDSymbol name="AboutTranslator" value="0x1033"/>
       <IDSymbol name="TranslatorOptionSubGroup" value="0x1034"/>
-      <IDSymbol name="TranslatorTtsSubGroup" value="0x1035"/>
-      <IDSymbol name="TextToSpeech" value="0x1036"/>
 
     </GuidSymbol>
 
@@ -313,9 +250,6 @@
 
     <GuidSymbol name="guidTranslateIcon" value="{FD45CA6D-7687-493D-8781-F2617E095AB1}">
       <IDSymbol name="googleIcon" value="1"/>
-      <IDSymbol name="bingIcon" value="2"/>
-      <IDSymbol name="baiduIcon" value="3"/>
-      <IDSymbol name="youdaoIcon" value="4"/>
     </GuidSymbol>
 
 

@@ -13,31 +13,13 @@ namespace Translate.Settings
 
         public TransSettings GoogleSettings { get; set; }
 
-        public TransSettings BingSettings { get; set; }
+        //public TransSettings BingSettings { get; set; }
 
-        public TransSettings BaiduSettings { get; set; }
+        //public TransSettings BaiduSettings { get; set; }
 
-        public TransSettings YoudaoSettings { get; set; }
+        //public TransSettings YoudaoSettings { get; set; }
 
         public List<Spliter> LetterSpliters { get; set; }
-
-        private string _translateCachePath;
-
-        public string TranslateCachePath
-        {
-            get
-            {
-                if (!Directory.Exists(_translateCachePath))
-                {
-                    Directory.CreateDirectory(_translateCachePath);
-                }
-                return _translateCachePath;
-            }
-            set
-            {
-                _translateCachePath = value;
-            }
-        }
 
         /// <summary>
         /// After the selected text is automatically translated
@@ -53,17 +35,7 @@ namespace Translate.Settings
 
         public bool AfterOpenWindowAutoPasteAndTranslate { get; set; } = true;
 
-        /// <summary>
-        /// Translate cache's default directory
-        /// </summary>
-        internal readonly static string TranslateCacheDefaultPath = Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "VsTranslator"), "TranslateCache");
-
         public TranslateResultShowType TranslateResultShowType { get; set; } = TranslateResultShowType.Modal;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public bool TextToSpeechWhenTranslate { get; set; }
 
         /// <summary>
         /// Get a Settings's instance with some default setting
@@ -74,32 +46,32 @@ namespace Translate.Settings
             return new Settings()
             {
                 ServiceIndex = 1,
-                BaiduSettings = new TransSettings()
-                {
-                    AppClient = new AppClient() { AppKey = "", ClientSecret = "" },
-                    LastLanguageIndex = 2,
-                    SourceLanguageIndex = 0,
-                    TargetLanguageIndex = 0
-                },
-                BingSettings = new TransSettings()
-                {
-                    AppClient = new AppClient()
-                    {
-                        AppKey = "",
-                        ClientSecret = ""
-                    },
-                    LastLanguageIndex = 12,
-                    SourceLanguageIndex = 0,
-                    TargetLanguageIndex = 5
-                }
-                    ,
-                YoudaoSettings = new TransSettings()
-                {
-                    AppClient = new AppClient() { AppKey = "", ClientSecret = "" },
-                    LastLanguageIndex = 1,
-                    SourceLanguageIndex = 0,
-                    TargetLanguageIndex = 0
-                },
+                //BaiduSettings = new TransSettings()
+                //{
+                //    AppClient = new AppClient() { AppKey = "", ClientSecret = "" },
+                //    LastLanguageIndex = 2,
+                //    SourceLanguageIndex = 0,
+                //    TargetLanguageIndex = 0
+                //},
+                //BingSettings = new TransSettings()
+                //{
+                //    AppClient = new AppClient()
+                //    {
+                //        AppKey = "",
+                //        ClientSecret = ""
+                //    },
+                //    LastLanguageIndex = 12,
+                //    SourceLanguageIndex = 0,
+                //    TargetLanguageIndex = 5
+                //}
+                //    ,
+                //YoudaoSettings = new TransSettings()
+                //{
+                //    AppClient = new AppClient() { AppKey = "", ClientSecret = "" },
+                //    LastLanguageIndex = 1,
+                //    SourceLanguageIndex = 0,
+                //    TargetLanguageIndex = 0
+                //},
                 GoogleSettings = new TransSettings()
                 {
                     LastLanguageIndex = 12,
@@ -121,18 +93,10 @@ namespace Translate.Settings
                         ReplaceRegex = " "
                     }
                 },
-                TranslateCachePath = TranslateCacheDefaultPath,
                 AfterTranslateSuccessedAutoCopy = true,
                 AfterOpenWindowAutoPasteAndTranslate = true
             };
         }
-    }
-
-    public class AppClient
-    {
-        public string AppKey { get; set; }
-
-        public string ClientSecret { get; set; }
     }
 
     public class TransSettings
@@ -142,8 +106,6 @@ namespace Translate.Settings
         public int TargetLanguageIndex { get; set; }
 
         public int LastLanguageIndex { get; set; }
-
-        public AppClient AppClient { get; set; }
     }
 
     public class Spliter

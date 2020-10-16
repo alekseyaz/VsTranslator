@@ -34,9 +34,9 @@ namespace Visual_Studio_Translator.Core.Utils
 
             #region four translate menu 
             AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.GoogleTranslate, TranslateMenu_Clicked);
-            AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.BingTranslate, TranslateMenu_Clicked);
-            AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.BaiduTranslate, TranslateMenu_Clicked);
-            AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.YoudaoTranslate, TranslateMenu_Clicked);
+            //AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.BingTranslate, TranslateMenu_Clicked);
+            //AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.BaiduTranslate, TranslateMenu_Clicked);
+            //AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.YoudaoTranslate, TranslateMenu_Clicked);
             #endregion
 
             #region translate option menu
@@ -261,9 +261,9 @@ namespace Visual_Studio_Translator.Core.Utils
         public void ChangeMenuCommandEnableStatus(bool enableCmd)
         {
             ChangeTranslatorCommand((int)PkgCmdIdList.GoogleTranslate, enableCmd);
-            ChangeTranslatorCommand((int)PkgCmdIdList.BingTranslate, enableCmd);
-            ChangeTranslatorCommand((int)PkgCmdIdList.BaiduTranslate, enableCmd);
-            ChangeTranslatorCommand((int)PkgCmdIdList.YoudaoTranslate, enableCmd);
+            //ChangeTranslatorCommand((int)PkgCmdIdList.BingTranslate, enableCmd);
+            //ChangeTranslatorCommand((int)PkgCmdIdList.BaiduTranslate, enableCmd);
+            //ChangeTranslatorCommand((int)PkgCmdIdList.YoudaoTranslate, enableCmd);
         }
         private static string _beforeSelectText;
         public void DelayTranslate(string selectedText)

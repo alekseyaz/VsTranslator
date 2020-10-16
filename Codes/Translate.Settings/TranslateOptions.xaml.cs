@@ -36,14 +36,9 @@ namespace Translate.Settings
 
 
             cbService.Items.Add(GoogleTranslator.GetName());
-            cbService.Items.Add(BingTranslator.GetName());
-            cbService.Items.Add(BaiduTranslator.GetName());
-            cbService.Items.Add(YoudaoTranslator.GetName());
-        }
-
-        private void lblBaidu_OnClick(object sender, RoutedEventArgs e)
-        {
-            Process.Start("http://api.fanyi.baidu.com/api/trans/product/index");
+            //cbService.Items.Add(BingTranslator.GetName());
+            //cbService.Items.Add(BaiduTranslator.GetName());
+            //cbService.Items.Add(YoudaoTranslator.GetName());
         }
 
 
@@ -68,76 +63,6 @@ namespace Translate.Settings
             new LetterSpliter(OptionsSettings.Settings.LetterSpliters) { Owner = this, ShowInTaskbar = false }.ShowDialog();
         }
 
-        /// <summary>
-        /// move cache to new folder
-        /// </summary>
-        /// <param name="oldFolder"></param>
-        /// <param name="newFolder"></param>
-        private void MoveCache2NewFolder(string oldFolder, string newFolder)
-        {
-            if (!Directory.Exists(newFolder))
-            {
-                Directory.CreateDirectory(newFolder);
-            }
-            var files = Directory.GetFiles(oldFolder);
-            foreach (var file in files)
-            {
-                var destFilePath = Path.Combine(newFolder, Path.GetFileName(file) ?? "nofilename");
-                File.Copy(file, destFilePath);
-                File.Delete(file);
-            }
-            var dirs = Directory.GetDirectories(oldFolder);
-            foreach (var subDir in dirs)
-            {
-                MoveCache2NewFolder(subDir, Path.Combine(newFolder, Path.GetFileName(subDir) ?? "sub_folder"));
-                Directory.Delete(subDir);
-            }
-        }
-
-        /// <summary>
-        /// Open the cache folder
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnOpen_OnClick(object sender, RoutedEventArgs e)
-        {
-            Process.Start("explorer.exe", OptionsSettings.Settings.TranslateCachePath);
-        }
-
-        #region clear up more than 60 days cache files
-        /// <summary>
-        /// trigger this even when click clear up button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnClearUp_OnClick(object sender, RoutedEventArgs e)
-        {
-            var clearUpDir = OptionsSettings.Settings.TranslateCachePath;
-            ClearUp(clearUpDir);
-            MessageBox.Show("Clear up successed!", @"Tip");
-        }
-        /// <summary>
-        /// recursively to clear up more than 60 days cache files
-        /// </summary>
-        /// <param name="dir"></param>
-        private void ClearUp(string dir)
-        {
-            var files = Directory.GetFiles(dir);
-            foreach (var file in files)
-            {
-                var fileinfo = new FileInfo(file);
-                if ((DateTime.Now - fileinfo.CreationTime).TotalDays > 60)
-                {
-                    File.Delete(file);
-                }
-            }
-            var dirs = Directory.GetDirectories(dir);
-            foreach (var subDir in dirs)
-            {
-                ClearUp(subDir);
-            }
-        }
-        #endregion
 
         #region translate service changed
         /// <summary>
@@ -156,18 +81,18 @@ namespace Translate.Settings
                     AppendLang2Control(GoogleTranslator.GetSourceLanguages(), GoogleTranslator.GetTargetLanguages());
                     SetLanguageSelectedIndex(Settings.GoogleSettings);
                     break;
-                case 1:
-                    AppendLang2Control(BingTranslator.GetSourceLanguages(), BingTranslator.GetTargetLanguages());
-                    SetLanguageSelectedIndex(Settings.BingSettings);
-                    break;
-                case 2:
-                    AppendLang2Control(BaiduTranslator.GetSourceLanguages(), BaiduTranslator.GetTargetLanguages());
-                    SetLanguageSelectedIndex(Settings.BaiduSettings);
-                    break;
-                case 3:
-                    AppendLang2Control(YoudaoTranslator.GetSourceLanguages(), YoudaoTranslator.GetTargetLanguages());
-                    SetLanguageSelectedIndex(Settings.YoudaoSettings);
-                    break;
+                //case 1:
+                //    AppendLang2Control(BingTranslator.GetSourceLanguages(), BingTranslator.GetTargetLanguages());
+                //    SetLanguageSelectedIndex(Settings.BingSettings);
+                //    break;
+                //case 2:
+                //    AppendLang2Control(BaiduTranslator.GetSourceLanguages(), BaiduTranslator.GetTargetLanguages());
+                //    SetLanguageSelectedIndex(Settings.BaiduSettings);
+                //    break;
+                //case 3:
+                //    AppendLang2Control(YoudaoTranslator.GetSourceLanguages(), YoudaoTranslator.GetTargetLanguages());
+                //    SetLanguageSelectedIndex(Settings.YoudaoSettings);
+                //    break;
             }
         }
 
@@ -235,15 +160,15 @@ namespace Translate.Settings
                 case 0:
                     transSettings = Settings.GoogleSettings;
                     break;
-                case 1:
-                    transSettings = Settings.BingSettings;
-                    break;
-                case 2:
-                    transSettings = Settings.BaiduSettings;
-                    break;
-                case 3:
-                    transSettings = Settings.YoudaoSettings;
-                    break;
+                //case 1:
+                //    transSettings = Settings.BingSettings;
+                //    break;
+                //case 2:
+                //    transSettings = Settings.BaiduSettings;
+                //    break;
+                //case 3:
+                //    transSettings = Settings.YoudaoSettings;
+                //    break;
             }
             return transSettings;
         }

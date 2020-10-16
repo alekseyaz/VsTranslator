@@ -46,12 +46,10 @@ namespace Visual_Studio_Translator.Adornment.TransResult
 
         public static void Add(IWpfTextView view, TranslationRequest transRequest)
         {
-            #region 解决有时候 new了之后layer还是为空 以及有时候调用了_layer.add之后却依旧不显示翻译控件的问题
             _view = view;
             _layer = view.GetAdornmentLayer("TranslatorAdornmentLayer");
             _view.LayoutChanged -= _view_LayoutChanged;
             _view.LayoutChanged += _view_LayoutChanged;
-            #endregion
 
             RemoveAllAdornments();
 
