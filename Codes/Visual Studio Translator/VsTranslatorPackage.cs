@@ -4,7 +4,6 @@ using System.Windows;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Visual_Studio_Translator.Adornment.Translate;
 using Visual_Studio_Translator.Core.Utils;
 
 namespace Visual_Studio_Translator
@@ -31,9 +30,9 @@ namespace Visual_Studio_Translator
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
 
 
-    [Guid(GuidList.PackageGuidString)]
-    [ProvideToolWindow(typeof(TranslateClient))]
-    [ProvideMenuResource("Menus.ctmenu", 1)]
+    //[Guid(GuidList.PackageGuidString)]
+    //[ProvideToolWindow(typeof(TranslateClient))]
+    //[ProvideMenuResource("Menus.ctmenu", 1)]
 
     //https://github.com/microsoft/VSSDK-Extensibility-Samples/tree/master/AsyncPackageMigration
     //https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-use-asyncpackage-to-load-vspackages-in-the-background?view=vs-2019

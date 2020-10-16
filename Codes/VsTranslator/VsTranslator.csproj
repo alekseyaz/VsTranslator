@@ -32,7 +32,8 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>key.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -74,10 +75,6 @@
     <DeployExtension>False</DeployExtension>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Adornment\Translate\TranslateClient.cs" />
-    <Compile Include="Adornment\Translate\TranslateClientControl.xaml.cs">
-      <DependentUpon>TranslateClientControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Adornment\TransResult\Connector.cs" />
     <Compile Include="Adornment\TransResult\TransAdornmentManager.cs" />
     <Compile Include="Adornment\TransResult\TranslatorControl.xaml.cs">
@@ -96,7 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="key.pfx" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -306,10 +302,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Adornment\Translate\TranslateClientControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Adornment\TransResult\TranslatorControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

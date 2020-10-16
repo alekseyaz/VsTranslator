@@ -14,8 +14,6 @@ using Microsoft.VisualStudio.TextManager.Interop;
 using Translate.Core.Translator;
 using Translate.Core.Translator.Utils;
 using Translate.Settings;
-using Translate.Settings.TTS;
-using VsTranslator.Adornment.Translate;
 using VsTranslator.Adornment.TransResult;
 
 namespace VsTranslator.Core.Utils
@@ -47,10 +45,6 @@ namespace VsTranslator.Core.Utils
             AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.TranslateOptions, TranslateOptions_Clicked, true);
             #endregion
 
-            #region translate client menu
-            AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.TranslateClient, TranslateClient_Clicked, true);
-            #endregion
-
             #region translate in website
             AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.TranslateInWebSite, TranslateInWebSite_Clicked, true);
             #endregion
@@ -62,18 +56,7 @@ namespace VsTranslator.Core.Utils
             #region check for updates
             AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.AboutTranslator, AboutTranslator_Clicked, true);
             #endregion
-
-            #region text to speech
-            AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.TextToSpeech, TextToSpeech_Clicked, true);
-            #endregion
         }
-
-        private static void TextToSpeech_Clicked(object sender, EventArgs e)
-        {
-            var selectedText = GetSelectedText();
-            Tts.Play(selectedText);
-        }
-
 
         /// <summary>
         /// Check for updates
@@ -103,26 +86,6 @@ namespace VsTranslator.Core.Utils
         private static void TranslateInWebSite_Clicked(object sender, EventArgs e)
         {
             Process.Start("https://translate.google.com/");
-        }
-
-        /// <summary>
-        /// Open translate client windows
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private static void TranslateClient_Clicked(object sender, EventArgs e)
-        {
-            //OptionsSettings.ShowClient();
-            ToolWindowPane window = _package.FindToolWindow(typeof(TranslateClient), 0, true);
-            if ((null == window) || (null == window.Frame))
-            {
-                throw new NotSupportedException("Cannot create tool window");
-            }
-            Guid nullGuid = Guid.Empty;
-            IVsWindowFrame windowFrame = (IVsWindowFrame)window.Frame;
-            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(windowFrame.Show());
-            //set the width and height
-            windowFrame.SetFramePos(VSSETFRAMEPOS.SFP_fSize, ref nullGuid, 0, 0, 640, 400);
         }
 
         private static void TranslateOptions_Clicked(object sender, EventArgs e)

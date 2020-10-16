@@ -69,38 +69,6 @@ namespace Translate.Settings
         }
 
         /// <summary>
-        /// Open a folder browser dialog to select directory for translate cache
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnChange_OnClick(object sender, RoutedEventArgs e)
-        {
-            var fbd = new FolderBrowserDialog
-            {
-                Description = "Translate cache path",
-                SelectedPath = OptionsSettings.Settings.TranslateCachePath,
-                ShowNewFolderButton = true
-            };
-            var showDialogResult = fbd.ShowDialog();
-            if (showDialogResult != System.Windows.Forms.DialogResult.OK)
-            {
-                return;
-            }
-            var selectFolder = fbd.SelectedPath;
-            if (!System.IO.Directory.Exists(selectFolder))
-            {
-                return;
-            }
-            var newFolder = selectFolder;
-            var foldername = Path.GetFileName(Settings.TranslateCacheDefaultPath) ?? "VsTranslateCache";
-            newFolder = Path.Combine(newFolder, foldername);
-            MoveCache2NewFolder(Settings.TranslateCachePath, newFolder);
-            Directory.Delete(Settings.TranslateCachePath);
-            //Do not know why only set one of the other will not change
-            Settings.TranslateCachePath = txtTranslateCachePath.Text = newFolder;
-            OptionsSettings.SaveSettings();
-        }
-        /// <summary>
         /// move cache to new folder
         /// </summary>
         /// <param name="oldFolder"></param>
