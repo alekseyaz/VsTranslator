@@ -30,9 +30,9 @@ namespace Visual_Studio_Translator
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
 
 
-    //[Guid(GuidList.PackageGuidString)]
+    [Guid(GuidList.PackageGuidString)]
     //[ProvideToolWindow(typeof(TranslateClient))]
-    //[ProvideMenuResource("Menus.ctmenu", 1)]
+    [ProvideMenuResource("Menus.ctmenu", 1)]
 
     //https://github.com/microsoft/VSSDK-Extensibility-Samples/tree/master/AsyncPackageMigration
     //https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-use-asyncpackage-to-load-vspackages-in-the-background?view=vs-2019

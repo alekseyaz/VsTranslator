@@ -264,7 +264,6 @@ namespace Visual_Studio_Translator.Core.Utils
             ChangeTranslatorCommand((int)PkgCmdIdList.BingTranslate, enableCmd);
             ChangeTranslatorCommand((int)PkgCmdIdList.BaiduTranslate, enableCmd);
             ChangeTranslatorCommand((int)PkgCmdIdList.YoudaoTranslate, enableCmd);
-            ChangeTranslatorCommand((int)PkgCmdIdList.TextToSpeech, enableCmd);
         }
         private static string _beforeSelectText;
         public void DelayTranslate(string selectedText)
