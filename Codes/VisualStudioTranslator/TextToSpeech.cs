@@ -2,10 +2,10 @@
 using System.IO;
 using System.Text;
 using System.Web;
-using VisualStudioTranslator.Translator.Google;
-using VisualStudioTranslator.Translator.Utils;
+using VisualStudioTranslator.Google;
+using VisualStudioTranslator.Utils;
 
-namespace VisualStudioTranslator.Translator
+namespace VisualStudioTranslator
 {
     using static GoogleUtils;
 

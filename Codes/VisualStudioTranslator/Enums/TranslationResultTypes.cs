@@ -1,4 +1,4 @@
-﻿namespace VisualStudioTranslator.Translator.Enums
+﻿namespace VisualStudioTranslator.Enums
 {
     public enum TranslationResultTypes
     {

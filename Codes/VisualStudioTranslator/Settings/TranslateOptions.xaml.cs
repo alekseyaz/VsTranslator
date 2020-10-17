@@ -5,8 +5,8 @@ using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
-using VisualStudioTranslator.Translator.Entities;
-using VisualStudioTranslator.Translator.Google;
+using VisualStudioTranslator.Entities;
+using VisualStudioTranslator.Google;
 using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace VisualStudioTranslator.Settings

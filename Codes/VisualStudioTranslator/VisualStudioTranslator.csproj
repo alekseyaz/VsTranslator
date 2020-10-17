@@ -81,18 +81,18 @@
     <Compile Include="Settings\TranslateType.cs" />
     <Compile Include="Settings\TranslationRequest.cs" />
     <Compile Include="Settings\TranslatorFactory.cs" />
-    <Compile Include="Translator\Entities\TranslationLanguage.cs" />
-    <Compile Include="Translator\Entities\TranslationResult.cs" />
-    <Compile Include="Translator\Enums\TranslationResultTypes.cs" />
-    <Compile Include="Translator\Google\Entities\GoogleTransResult.cs" />
-    <Compile Include="Translator\Google\GoogleTranslator.cs" />
-    <Compile Include="Translator\Google\GoogleUtils.cs" />
-    <Compile Include="Translator\ITranslator.cs" />
-    <Compile Include="Translator\TextToSpeech.cs" />
-    <Compile Include="Translator\Utils\Encrypts.cs" />
-    <Compile Include="Translator\Utils\HttpHelper.cs" />
-    <Compile Include="Translator\Utils\Times.cs" />
-    <Compile Include="Translator\Utils\WebException.cs" />
+    <Compile Include="Entities\TranslationLanguage.cs" />
+    <Compile Include="Entities\TranslationResult.cs" />
+    <Compile Include="Enums\TranslationResultTypes.cs" />
+    <Compile Include="Google\Entities\GoogleTransResult.cs" />
+    <Compile Include="Google\GoogleTranslator.cs" />
+    <Compile Include="Google\GoogleUtils.cs" />
+    <Compile Include="ITranslator.cs" />
+    <Compile Include="TextToSpeech.cs" />
+    <Compile Include="Utils\Encrypts.cs" />
+    <Compile Include="Utils\HttpHelper.cs" />
+    <Compile Include="Utils\Times.cs" />
+    <Compile Include="Utils\WebException.cs" />
     <Compile Include="VsTranslatorPackage.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,9 +105,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
-    <Content Include="Resources\favicon_64_64.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Resource Include="Resources\google_16.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

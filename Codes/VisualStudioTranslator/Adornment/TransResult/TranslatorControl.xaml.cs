@@ -4,7 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Text;
-using VisualStudioTranslator.Translator.Enums;
+using VisualStudioTranslator.Enums;
 using VisualStudioTranslator.Settings;
 
 namespace VisualStudioTranslator.Adornment.TransResult

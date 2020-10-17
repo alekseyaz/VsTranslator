@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Newtonsoft.Json;
-using VisualStudioTranslator.Translator;
-using VisualStudioTranslator.Translator.Entities;
+using VisualStudioTranslator;
+using VisualStudioTranslator.Entities;
 
 namespace VisualStudioTranslator.Settings
 {

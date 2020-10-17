@@ -1,4 +1,4 @@
-﻿using VisualStudioTranslator.Translator.Enums;
+﻿using VisualStudioTranslator.Enums;
 using VisualStudioTranslator.Core.Utils;
 using VisualStudioTranslator.Settings;
 

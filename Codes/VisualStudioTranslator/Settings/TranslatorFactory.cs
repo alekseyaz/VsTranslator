@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
-using VisualStudioTranslator.Translator;
-using VisualStudioTranslator.Translator.Google;
+using VisualStudioTranslator;
+using VisualStudioTranslator.Google;
 
 namespace VisualStudioTranslator.Settings
 {

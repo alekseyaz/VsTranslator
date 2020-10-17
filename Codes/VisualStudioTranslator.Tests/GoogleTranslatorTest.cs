@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VisualStudioTranslator.Translator;
-using VisualStudioTranslator.Translator.Entities;
-using VisualStudioTranslator.Translator.Google;
+using VisualStudioTranslator;
+using VisualStudioTranslator.Entities;
+using VisualStudioTranslator.Google;
 
 namespace VisualStudioTranslator.Tests
 {

@@ -1,6 +1,6 @@
-﻿using VisualStudioTranslator.Translator.Enums;
+﻿using VisualStudioTranslator.Enums;
 
-namespace VisualStudioTranslator.Translator.Entities
+namespace VisualStudioTranslator.Entities
 {
     public class TranslationResult
     {

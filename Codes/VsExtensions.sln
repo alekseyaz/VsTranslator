@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudioTranslator.Tests", "VsTranslatorTest\VisualStudioTranslator.Tests.csproj", "{2A6F05CE-B83C-4D7C-854B-82E51A336E0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudioTranslator.Tests", "VisualStudioTranslator.Tests\VisualStudioTranslator.Tests.csproj", "{2A6F05CE-B83C-4D7C-854B-82E51A336E0D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudioTranslator", "VisualStudioTranslator\VisualStudioTranslator.csproj", "{DD23AB72-3722-4EEF-866F-534B6B3B9EE5}"
 EndProject

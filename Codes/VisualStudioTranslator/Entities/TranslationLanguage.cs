@@ -1,4 +1,4 @@
-﻿namespace VisualStudioTranslator.Translator.Entities
+﻿namespace VisualStudioTranslator.Entities
 {
 	public class TranslationLanguage
 	{

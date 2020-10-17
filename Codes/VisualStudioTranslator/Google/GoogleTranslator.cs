@@ -5,12 +5,12 @@ using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Web;
-using VisualStudioTranslator.Translator.Entities;
-using VisualStudioTranslator.Translator.Enums;
-using VisualStudioTranslator.Translator.Google.Entities;
-using VisualStudioTranslator.Translator.Utils;
+using VisualStudioTranslator.Entities;
+using VisualStudioTranslator.Enums;
+using VisualStudioTranslator.Google.Entities;
+using VisualStudioTranslator.Utils;
 
-namespace VisualStudioTranslator.Translator.Google
+namespace VisualStudioTranslator.Google
 {
     using static GoogleUtils;
 

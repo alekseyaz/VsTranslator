@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-namespace VisualStudioTranslator.Translator.Utils
+namespace VisualStudioTranslator.Utils
 {
     internal class WebException
     {

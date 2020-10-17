@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using VisualStudioTranslator.Translator.Entities;
+using VisualStudioTranslator.Entities;
 
-namespace VisualStudioTranslator.Translator
+namespace VisualStudioTranslator
 {
     public interface ITranslator
     {

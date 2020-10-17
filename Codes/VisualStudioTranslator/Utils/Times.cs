@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VisualStudioTranslator.Translator.Utils
+namespace VisualStudioTranslator.Utils
 {
     internal static class Times
     {

@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace VisualStudioTranslator.Translator.Utils
+namespace VisualStudioTranslator.Utils
 {
     public static class Encrypts
     {

@@ -13,7 +13,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace VisualStudioTranslator.Translator.Utils
+namespace VisualStudioTranslator.Utils
 {
     /// <summary>
     /// Http连接操作帮助类
