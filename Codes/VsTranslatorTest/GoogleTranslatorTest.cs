@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Translate.Core.Translator;
-using Translate.Core.Translator.Entities;
-using Translate.Core.Translator.Google;
+using VisualStudioTranslator.Translator;
+using VisualStudioTranslator.Translator.Entities;
+using VisualStudioTranslator.Translator.Google;
 
-namespace VsTranslatorTest
+namespace VisualStudioTranslator.Tests
 {
     [TestClass]
     public class GoogleTranslatorTest
@@ -13,30 +13,30 @@ namespace VsTranslatorTest
         [TestMethod]
         public void Translate()
         {
-            string sourceText = "TDD completely turns traditional development around.";
-            TranslationResult transResult = _googleTranslator.Translate(sourceText, "en", "zh-CN");
-            Assert.AreEqual("TDD完全转向传统的发展。", transResult.TargetText);
+            string sourceText = "TDD completely turned to traditional development.";
+            TranslationResult transResult = _googleTranslator.Translate(sourceText, "en", "ru");
+            Assert.AreEqual("TDD полностью превратился в традиционную разработку.", transResult.TargetText);
 
-            sourceText = "你今天过得好不好";
-            transResult = _googleTranslator.Translate(sourceText, "zh-CN", "en");
+            sourceText = "How are you doing today?";
+            transResult = _googleTranslator.Translate(sourceText, "ru", "en");
             Assert.AreEqual("How are you doing today?", transResult.TargetText);
 
             sourceText = "hello\"";
-            transResult = _googleTranslator.Translate(sourceText, "en", "zh-CN");
-            Assert.AreEqual("你好”", transResult.TargetText);
+            transResult = _googleTranslator.Translate(sourceText, "en", "ru");
+            Assert.AreEqual("Здравствуйте\"", transResult.TargetText);
 
             sourceText = "hello";
-            transResult = _googleTranslator.Translate(sourceText, "en", "zh-CN");
-            Assert.AreEqual("你好", transResult.TargetText);
+            transResult = _googleTranslator.Translate(sourceText, "en", "ru");
+            Assert.AreEqual("Здравствуйте", transResult.TargetText);
 
             sourceText = "It's a very small project and may be fairly self explanatory if you are familiar with Visual Studio editor extensions. There are two components to the extension:";
-            transResult = _googleTranslator.Translate(sourceText, "en", "zh-CN");
-            Assert.AreEqual("这是一个非常小的项目，如果您熟悉Visual Studio编辑器扩展，这可能是相当自我解释。扩展有两个组件：", transResult.TargetText);
+            transResult = _googleTranslator.Translate(sourceText, "en", "ru");
+            Assert.AreEqual("Это очень небольшой проект, и он может быть достаточно понятным, если вы знакомы с расширениями редактора Visual Studio. Расширение состоит из двух компонентов:", transResult.TargetText);
 
 
             sourceText = "<result>";
-            transResult = _googleTranslator.Translate(sourceText, "en", "zh-CN");
-            Assert.AreEqual("<结果>", transResult.TargetText);
+            transResult = _googleTranslator.Translate(sourceText, "en", "ru");
+            Assert.AreEqual("<результат>", transResult.TargetText);
         }
     }
 }

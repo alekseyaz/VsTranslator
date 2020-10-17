@@ -3,22 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VsTranslator", "VsTranslator", "{3523F31E-AD73-48AD-990F-65CA6645A773}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudioTranslator.Tests", "VsTranslatorTest\VisualStudioTranslator.Tests.csproj", "{2A6F05CE-B83C-4D7C-854B-82E51A336E0D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{8FBC34BD-DD4E-4B98-B094-444181B394D0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsTranslatorTest", "VsTranslatorTest\VsTranslatorTest.csproj", "{2A6F05CE-B83C-4D7C-854B-82E51A336E0D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translate.Core", "Translate.Core\Translate.Core.csproj", "{70DD5B86-868A-4AD1-8513-A29F7CA09C0C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translate.Settings", "Translate.Settings\Translate.Settings.csproj", "{37238584-099C-453F-A67D-93671FB556BC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visual Studio Translator", "Visual Studio Translator\Visual Studio Translator.csproj", "{DD23AB72-3722-4EEF-866F-534B6B3B9EE5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{787E0668-720A-45DC-BC92-089FD932726B}"
-	ProjectSection(SolutionItems) = preProject
-		..\README.md = ..\README.md
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudioTranslator", "VisualStudioTranslator\VisualStudioTranslator.csproj", "{DD23AB72-3722-4EEF-866F-534B6B3B9EE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,14 +17,6 @@ Global
 		{2A6F05CE-B83C-4D7C-854B-82E51A336E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A6F05CE-B83C-4D7C-854B-82E51A336E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A6F05CE-B83C-4D7C-854B-82E51A336E0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70DD5B86-868A-4AD1-8513-A29F7CA09C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70DD5B86-868A-4AD1-8513-A29F7CA09C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70DD5B86-868A-4AD1-8513-A29F7CA09C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70DD5B86-868A-4AD1-8513-A29F7CA09C0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37238584-099C-453F-A67D-93671FB556BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37238584-099C-453F-A67D-93671FB556BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37238584-099C-453F-A67D-93671FB556BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37238584-099C-453F-A67D-93671FB556BC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DD23AB72-3722-4EEF-866F-534B6B3B9EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD23AB72-3722-4EEF-866F-534B6B3B9EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD23AB72-3722-4EEF-866F-534B6B3B9EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,12 +24,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{2A6F05CE-B83C-4D7C-854B-82E51A336E0D} = {8FBC34BD-DD4E-4B98-B094-444181B394D0}
-		{70DD5B86-868A-4AD1-8513-A29F7CA09C0C} = {3523F31E-AD73-48AD-990F-65CA6645A773}
-		{37238584-099C-453F-A67D-93671FB556BC} = {3523F31E-AD73-48AD-990F-65CA6645A773}
-		{DD23AB72-3722-4EEF-866F-534B6B3B9EE5} = {3523F31E-AD73-48AD-990F-65CA6645A773}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D4A272D-B8FA-4D6F-AD0B-B24FBD3CAC28}
