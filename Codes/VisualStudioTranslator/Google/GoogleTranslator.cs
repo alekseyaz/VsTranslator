@@ -1,11 +1,9 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-//using System.Net;
 using System.Web;
 using VisualStudioTranslator.Entities;
 using VisualStudioTranslator.Enums;
@@ -19,7 +17,7 @@ namespace VisualStudioTranslator.Google
 
         private static readonly List<TranslationLanguage> TargetLanguages;
         private static readonly List<TranslationLanguage> SourceLanguages;
-        static readonly HttpClient client = new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
 
 
         static GoogleTranslator()
@@ -110,11 +108,9 @@ namespace VisualStudioTranslator.Google
                 HttpResponseMessage response = await client.GetAsync(uri);
                 response.EnsureSuccessStatusCode();
                 string html = await response.Content.ReadAsStringAsync();
+
                 // Above three lines can be replaced with new helper method below
                 // string responseBody = await client.GetStringAsync(uri);
-
-                //var payload = JObject.Parse(html);
-
 
                 if (html.Contains("/sorry/index?continue=") && html.Contains("302 Moved"))
                 {
@@ -133,18 +129,16 @@ namespace VisualStudioTranslator.Google
                     };
                 }
 
-                dynamic tempResult = Newtonsoft.Json.JsonConvert.DeserializeObject(html);
-                var resarry = Newtonsoft.Json.JsonConvert.DeserializeObject(tempResult[0].ToString());
-                var length = (resarry.Count);
+                JArray jArray = JArray.Parse(html);
+                var resarry = jArray[0];
                 var str = new System.Text.StringBuilder();
-                for (int i = 0; i < length; i++)
+                foreach (JArray res in resarry)
                 {
-                    var res = Newtonsoft.Json.JsonConvert.DeserializeObject(resarry[i].ToString());
                     str.Append(res[0].ToString());
                 }
                 return new GoogleTransResult()
                 {
-                    From = tempResult[2].ToString(),
+                    From = jArray[2].ToString(),
                     TargetText = str.ToString()
                 };
             }
