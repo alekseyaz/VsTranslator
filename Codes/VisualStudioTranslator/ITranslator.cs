@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using VisualStudioTranslator.Entities;
 
 namespace VisualStudioTranslator
 {
-    public interface ITranslator
+    public interface ITranslatorAsync
     {
         //string Translate(string text, string from, string to);
 
@@ -19,7 +20,7 @@ namespace VisualStudioTranslator
         /// <param name="from">Source language</param>
         /// <param name="to">Target language</param>
         /// <returns></returns>
-        TranslationResult Translate(string text, string from, string to);
+        Task<TranslationResult> TranslateAsync(string text, string from, string to);
         /// <summary>
         /// To get all support target languages
         /// </summary>

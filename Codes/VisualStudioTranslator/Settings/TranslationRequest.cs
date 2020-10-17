@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using VisualStudioTranslator;
 using VisualStudioTranslator.Entities;
@@ -32,12 +33,12 @@ namespace VisualStudioTranslator.Settings
         }
 
 
-        private void TranslationThread(object obj)
+        private async void TranslationThread(object obj)
         {
             Trans trans = obj as Trans;
             if (trans != null)
             {
-                TranslationResult result = trans.Translator.Translate(_selectedText, trans.SourceLanguage, trans.TargetLanguage);
+                TranslationResult result = await trans.Translator.TranslateAsync(_selectedText, trans.SourceLanguage, trans.TargetLanguage);
 
                 TranslateResult translateResult = JsonConvert.DeserializeObject<TranslateResult>(JsonConvert.SerializeObject(result));
 
@@ -59,7 +60,7 @@ namespace VisualStudioTranslator.Settings
 
     public class Trans
     {
-        public ITranslator Translator { get; set; }
+        public ITranslatorAsync Translator { get; set; }
 
         public string SourceLanguage { get; set; }
 
@@ -68,7 +69,7 @@ namespace VisualStudioTranslator.Settings
 
     public class TranslateResult : TranslationResult
     {
-        public ITranslator Translator { get; set; }
+        public ITranslatorAsync Translator { get; set; }
 
         public string Identity { get; set; }
     }

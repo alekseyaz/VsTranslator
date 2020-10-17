@@ -192,7 +192,7 @@ namespace VisualStudioTranslator.Core.Utils
         {
             TranslateType translateType = (TranslateType)commandId;
             selectedText = OptionsSettings.SpliteLetterByRules(selectedText);
-            ITranslator translator = null;
+            ITranslatorAsync translator = null;
             try
             {
                 translator = TranslatorFactory.GetTranslator(translateType);

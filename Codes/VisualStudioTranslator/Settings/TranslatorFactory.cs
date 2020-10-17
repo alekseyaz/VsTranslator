@@ -18,7 +18,7 @@ namespace VisualStudioTranslator.Settings
             return GoogleTranslator.GetTargetLanguages()[OptionsSettings.Settings.GoogleSettings.TargetLanguageIndex].Code;
         }
 
-        public static ITranslator GetTranslator(TranslateType type)
+        public static ITranslatorAsync GetTranslator(TranslateType type)
         {
             return new GoogleTranslator();
         }
