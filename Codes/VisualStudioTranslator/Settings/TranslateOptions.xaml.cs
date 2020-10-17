@@ -60,8 +60,6 @@ namespace VisualStudioTranslator.Settings
             new LetterSpliter(OptionsSettings.Settings.LetterSpliters) { Owner = this, ShowInTaskbar = false }.ShowDialog();
         }
 
-
-        #region translate service changed
         /// <summary>
         /// When the translate service was changed, to set source language, target language and last language 
         /// </summary>
@@ -71,7 +69,6 @@ namespace VisualStudioTranslator.Settings
         {
             cbSourceLanguage.Items.Clear();
             cbTargetLanguage.Items.Clear();
-            cbLastLanguage.Items.Clear();
             switch (cbService.SelectedIndex)
             {
                 case 0:
@@ -98,14 +95,12 @@ namespace VisualStudioTranslator.Settings
         {
             cbSourceLanguage.SelectedIndex = transSettings.SourceLanguageIndex;
             cbTargetLanguage.SelectedIndex = transSettings.TargetLanguageIndex;
-            cbLastLanguage.SelectedIndex = transSettings.LastLanguageIndex;
         }
 
         private void AppendLang2Control(List<TranslationLanguage> sourceLanguages, List<TranslationLanguage> targetLanguages)
         {
             AppendLang2SourceLanguage(sourceLanguages);
             AppendLang2TargetLanguage(targetLanguages);
-            AppendLang2LastLanguage(targetLanguages);
         }
 
         private void AppendLang2SourceLanguage(List<TranslationLanguage> langs)
@@ -123,16 +118,7 @@ namespace VisualStudioTranslator.Settings
                 cbTargetLanguage.Items.Add(translationLanguage);
             }
         }
-        private void AppendLang2LastLanguage(List<TranslationLanguage> langs)
-        {
-            foreach (TranslationLanguage translationLanguage in langs)
-            {
-                cbLastLanguage.Items.Add(translationLanguage);
-            }
-        }
-        #endregion
 
-        #region target language changed
         private void cbTargetLanguage_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //TranslationLanguage lang = cbTargetLanguage.SelectedValue as TranslationLanguage;
@@ -147,7 +133,6 @@ namespace VisualStudioTranslator.Settings
                 transSettings.TargetLanguageIndex = cbTargetLanguage.SelectedIndex;
             }
         }
-        #endregion
 
         private TransSettings GetTransSettings()
         {
@@ -184,18 +169,18 @@ namespace VisualStudioTranslator.Settings
             }
         }
 
-        private void cbLastLanguage_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            SetLastLanguageIndex(GetTransSettings());
-        }
+        //private void cbLastLanguage_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    SetLastLanguageIndex(GetTransSettings());
+        //}
 
-        private void SetLastLanguageIndex(TransSettings transSettings)
-        {
-            if (cbLastLanguage.SelectedIndex != transSettings.LastLanguageIndex && cbLastLanguage.SelectedIndex != -1)
-            {
-                transSettings.LastLanguageIndex = cbLastLanguage.SelectedIndex;
-            }
-        }
+        //private void SetLastLanguageIndex(TransSettings transSettings)
+        //{
+        //    if (cbLastLanguage.SelectedIndex != transSettings.LastLanguageIndex && cbLastLanguage.SelectedIndex != -1)
+        //    {
+        //        transSettings.LastLanguageIndex = cbLastLanguage.SelectedIndex;
+        //    }
+        //}
 
         private void cbAutoTranslate_Checked(object sender, RoutedEventArgs e)
         {

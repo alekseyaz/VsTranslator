@@ -19,7 +19,7 @@ namespace VisualStudioTranslator.Adornment.TransResult
 
             _view.LayoutChanged += _view_LayoutChanged;
 
-            // _view.Background = new SolidColorBrush(Color.FromRgb(0, 255, 0));
+            //_view.Background = new SolidColorBrush(Color.FromRgb(0, 255, 0));
 
             var curBgColor = (_view.Background as SolidColorBrush)?.Color;
 

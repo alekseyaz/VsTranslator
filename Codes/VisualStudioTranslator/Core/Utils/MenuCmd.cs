@@ -31,29 +31,18 @@ namespace VisualStudioTranslator.Core.Utils
         {
             Instance = new MenuCmd(package);
 
-
-            #region four translate menu 
             AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.GoogleTranslate, TranslateMenu_Clicked);
             //AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.BingTranslate, TranslateMenu_Clicked);
             //AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.BaiduTranslate, TranslateMenu_Clicked);
             //AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.YoudaoTranslate, TranslateMenu_Clicked);
-            #endregion
 
-            #region translate option menu
             AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.TranslateOptions, TranslateOptions_Clicked, true);
-            #endregion
 
-            #region translate in website
             AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.TranslateInWebSite, TranslateInWebSite_Clicked, true);
-            #endregion
 
-            #region download in website
             AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.DownloadInWebSite, DownloadInWebSite_Clicked, true);
-            #endregion
 
-            #region check for updates
             AddCommand2OleMenu(GuidList.CommandSet, (int)PkgCmdIdList.AboutTranslator, AboutTranslator_Clicked, true);
-            #endregion
 
         }
 

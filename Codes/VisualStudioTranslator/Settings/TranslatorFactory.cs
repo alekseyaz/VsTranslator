@@ -16,16 +16,12 @@ namespace VisualStudioTranslator.Settings
         //private static ITranslator _youdaoTranslator;
 
         /// <summary>
-        /// 不含标点
+        /// No punctuation
         /// </summary>
         private static readonly Regex ChineseRegex = new Regex(@"[\u4e00-\u9fa5]");
 
         public static string GetSourceLanguage(TranslateType type, string selectedText)
         {
-            if (OptionsSettings.Settings.IsEnabledFirstJudgeChinese && ChineseRegex.IsMatch(selectedText))
-            {
-                return GetChineseLanguage(type);
-            }
             string sourceLanguage = string.Empty;
 
             switch (type)
@@ -95,28 +91,28 @@ namespace VisualStudioTranslator.Settings
         }
 
 
-        private static string GetChineseLanguage(TranslateType type)
-        {
-            string chineseLanguage = string.Empty;
-            switch (type)
-            {
-                case TranslateType.Google:
-                    chineseLanguage = GoogleTranslator.GetChineseLanguage();
-                    break;
-                //case TranslateType.Bing:
-                //    chineseLanguage = BingTranslator.GetChineseLanguage();
-                //    break;
-                //case TranslateType.Baidu:
-                //    chineseLanguage = BaiduTranslator.GetChineseLanguage();
-                //    break;
-                //case TranslateType.Youdao:
-                //    chineseLanguage = YoudaoTranslator.GetChineseLanguage();
-                //    break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
-            }
-            return chineseLanguage;
-        }
+        //private static string GetChineseLanguage(TranslateType type)
+        //{
+        //    string chineseLanguage = string.Empty;
+        //    switch (type)
+        //    {
+        //        case TranslateType.Google:
+        //            chineseLanguage = GoogleTranslator.GetChineseLanguage();
+        //            break;
+        //        //case TranslateType.Bing:
+        //        //    chineseLanguage = BingTranslator.GetChineseLanguage();
+        //        //    break;
+        //        //case TranslateType.Baidu:
+        //        //    chineseLanguage = BaiduTranslator.GetChineseLanguage();
+        //        //    break;
+        //        //case TranslateType.Youdao:
+        //        //    chineseLanguage = YoudaoTranslator.GetChineseLanguage();
+        //        //    break;
+        //        default:
+        //            throw new ArgumentOutOfRangeException(nameof(type), type, null);
+        //    }
+        //    return chineseLanguage;
+        //}
 
 
         public static ITranslator GetTranslator(TranslateType type)

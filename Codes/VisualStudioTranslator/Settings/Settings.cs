@@ -26,7 +26,7 @@ namespace VisualStudioTranslator.Settings
         /// </summary>
         public bool IsAutoTranslate { get; set; } = false;
 
-        public bool IsEnabledFirstJudgeChinese { get; set; } = false;
+        //public bool IsEnabledFirstJudgeChinese { get; set; } = false;
 
         public int DelayMilliOfAutoTranslate { get; set; } = 300;
 

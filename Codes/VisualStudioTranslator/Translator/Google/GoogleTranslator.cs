@@ -25,62 +25,62 @@ namespace VisualStudioTranslator.Translator.Google
         {
             TargetLanguages = new List<TranslationLanguage>()
             {
-                new TranslationLanguage ("af", "Afrikaans / 南非荷兰语"),
-                new TranslationLanguage ("sq", "Albanian / 阿尔巴尼亚语"),
-                new TranslationLanguage ("ar", "Arabic / 阿拉伯语"),
-                new TranslationLanguage ("be", "Belarusian / 白俄罗斯语"),
-                new TranslationLanguage ("bg", "Bulgarian / 保加利亚语"),
-                new TranslationLanguage ("ca", "Catalan / 加泰罗尼亚语"),
-                new TranslationLanguage ("zh-CN", "Chinese (Simplified) / 简体中文"),
-                new TranslationLanguage ("zh-TW", "Chinese (Traditional) / 繁体中文"),
-                new TranslationLanguage ("hr", "Croatian / 克罗地亚语"),
-                new TranslationLanguage ("cs", "Czech / 捷克语"),
-                new TranslationLanguage ("da", "Danish / 丹麦语"),
-                new TranslationLanguage ("nl", "Dutch / 荷兰语"),
-                new TranslationLanguage ("en", "English / 英语"),
-                new TranslationLanguage ("et", "Estonian / 爱沙尼亚语"),
-                new TranslationLanguage ("tl", "Filipino / 菲律宾语"),
-                new TranslationLanguage ("fi", "Finnish / 芬兰语"),
-                new TranslationLanguage ("fr", "French / 法语"),
-                new TranslationLanguage ("gl", "Galician / 加利西亚语"),
-                new TranslationLanguage ("de", "German / 德语"),
-                new TranslationLanguage ("el", "Greek / 希腊语"),
-                new TranslationLanguage ("iw", "Hebrew / 希伯来语"),
-                new TranslationLanguage ("hi", "Hindi / 印地语"),
-                new TranslationLanguage ("hu", "Hungarian / 匈牙利语"),
-                new TranslationLanguage ("is", "Icelandic / 冰岛语"),
-                new TranslationLanguage ("id", "Indonesian / 印度尼西亚语"),
-                new TranslationLanguage ("ga", "Irish / 爱尔兰语"),
-                new TranslationLanguage ("it", "Italian / 意大利语"),
-                new TranslationLanguage ("ja", "Japanese / 日语"),
-                new TranslationLanguage ("ko", "Korean / 朝鲜语"),
-                new TranslationLanguage ("lv", "Latvian / 拉脱维亚语"),
-                new TranslationLanguage ("lt", "Lithuanian / 立陶宛语"),
-                new TranslationLanguage ("mk", "Macedonian / 马其顿语"),
-                new TranslationLanguage ("ms", "Malay / 马来语"),
-                new TranslationLanguage ("mt", "Maltese / 马耳他语"),
-                new TranslationLanguage ("fa", "Persian / 波斯语"),
-                new TranslationLanguage ("pl", "Polish / 波兰语"),
-                new TranslationLanguage ("pt", "Portugese / 葡萄牙语"),
-                new TranslationLanguage ("ro", "Romanian / 罗马尼亚语"),
-                new TranslationLanguage ("ru", "Russian / 俄语"),
-                new TranslationLanguage ("sr", "Serbian / 塞尔维亚语"),
-                new TranslationLanguage ("sk", "Slovak / 斯洛伐克语"),
-                new TranslationLanguage ("sl", "Slovenian / 斯洛文尼亚语"),
-                new TranslationLanguage ("es", "Spanish / 西班牙语"),
-                new TranslationLanguage ("sw", "Swahili / 斯瓦希里语"),
-                new TranslationLanguage ("sv", "Swedish / 瑞典语"),
-                new TranslationLanguage ("th", "Thai / 泰语"),
-                new TranslationLanguage ("tr", "Turkish / 土耳其语"),
-                new TranslationLanguage ("uk", "Ukranian / 乌克兰语"),
-                new TranslationLanguage ("vi", "Vietnamese / 越南语"),
-                new TranslationLanguage ("cy", "Welsh / 威尔士语"),
-                new TranslationLanguage ("yi", "Yiddish / 意第绪语"),
-                new TranslationLanguage ("mn", "Mongolian / 蒙古语"),
-                new TranslationLanguage ("la", "Latin / 拉丁语")
+                new TranslationLanguage ("af", "Afrikaans"),
+                new TranslationLanguage ("sq", "Albanian"),
+                new TranslationLanguage ("ar", "Arabic"),
+                new TranslationLanguage ("be", "Belarusian"),
+                new TranslationLanguage ("bg", "Bulgarian"),
+                new TranslationLanguage ("ca", "Catalan"),
+                new TranslationLanguage ("zh-CN", "Chinese (Simplified)"),
+                new TranslationLanguage ("zh-TW", "Chinese (Traditional)"),
+                new TranslationLanguage ("hr", "Croatian"),
+                new TranslationLanguage ("cs", "Czech"),
+                new TranslationLanguage ("da", "Danish"),
+                new TranslationLanguage ("nl", "Dutch"),
+                new TranslationLanguage ("en", "English"),
+                new TranslationLanguage ("et", "Estonian"),
+                new TranslationLanguage ("tl", "Filipino"),
+                new TranslationLanguage ("fi", "Finnish"),
+                new TranslationLanguage ("fr", "French"),
+                new TranslationLanguage ("gl", "Galician"),
+                new TranslationLanguage ("de", "German"),
+                new TranslationLanguage ("el", "Greek"),
+                new TranslationLanguage ("iw", "Hebrew"),
+                new TranslationLanguage ("hi", "Hindi"),
+                new TranslationLanguage ("hu", "Hungarian"),
+                new TranslationLanguage ("is", "Icelandic"),
+                new TranslationLanguage ("id", "Indonesian"),
+                new TranslationLanguage ("ga", "Irish"),
+                new TranslationLanguage ("it", "Italian"),
+                new TranslationLanguage ("ja", "Japanese"),
+                new TranslationLanguage ("ko", "Korean"),
+                new TranslationLanguage ("lv", "Latvian"),
+                new TranslationLanguage ("lt", "Lithuanian"),
+                new TranslationLanguage ("mk", "Macedonian"),
+                new TranslationLanguage ("ms", "Malay"),
+                new TranslationLanguage ("mt", "Maltese"),
+                new TranslationLanguage ("fa", "Persian"),
+                new TranslationLanguage ("pl", "Polish"),
+                new TranslationLanguage ("pt", "Portugese"),
+                new TranslationLanguage ("ro", "Romanian"),
+                new TranslationLanguage ("ru", "Russian"),
+                new TranslationLanguage ("sr", "Serbian"),
+                new TranslationLanguage ("sk", "Slovak"),
+                new TranslationLanguage ("sl", "Slovenian"),
+                new TranslationLanguage ("es", "Spanish"),
+                new TranslationLanguage ("sw", "Swahili"),
+                new TranslationLanguage ("sv", "Swedish"),
+                new TranslationLanguage ("th", "Thai"),
+                new TranslationLanguage ("tr", "Turkish"),
+                new TranslationLanguage ("uk", "Ukranian"),
+                new TranslationLanguage ("vi", "Vietnamese"),
+                new TranslationLanguage ("cy", "Welsh"),
+                new TranslationLanguage ("yi", "Yiddish"),
+                new TranslationLanguage ("mn", "Mongolian"),
+                new TranslationLanguage ("la", "Latin")
             };
 
-            SourceLanguages = new List<TranslationLanguage>() { new TranslationLanguage("auto", "Auto-detect / 自动检测") };
+            SourceLanguages = new List<TranslationLanguage>() { new TranslationLanguage("auto", "Auto-detect") };
             SourceLanguages.AddRange(TargetLanguages);
         }
 
@@ -128,12 +128,12 @@ namespace VisualStudioTranslator.Translator.Google
                     TargetText = "Current IP traffic anomaly, can not be translated!"
                 };
             }
-            if (html.Contains("Error 403 (禁止访问)!"))
+            if (html.Contains("Error 403!"))
             {
                 return new GoogleTransResult()
                 {
                     From = "Unknown",
-                    TargetText = "Error 403 (禁止访问)!"
+                    TargetText = "Error 403!"
                 };
             }
 
@@ -159,7 +159,7 @@ namespace VisualStudioTranslator.Translator.Google
         }
         public static string GetName()
         {
-            return "Google Translator / 谷歌翻译";
+            return "Google Translator";
         }
         public static string GetChineseLanguage()
         {
