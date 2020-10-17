@@ -37,7 +37,7 @@
     </Border>
     <UserControl.Resources>
         <Style x:Key="FontAwesome" TargetType="{x:Type Button}" >
-            <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/Visual Studio Translator;component/Resources/fonts/#iconfont" />
+            <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/VisualStudioTranslator;component/Resources/fonts/#iconfont" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
