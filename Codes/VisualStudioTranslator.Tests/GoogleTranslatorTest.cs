@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VisualStudioTranslator;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VisualStudioTranslator.Entities;
 using VisualStudioTranslator.Google;
 

@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text.RegularExpressions;
 using System.Web;
 using VisualStudioTranslator.Entities;
 using VisualStudioTranslator.Enums;
 using VisualStudioTranslator.Google.Entities;
-using VisualStudioTranslator.Utils;
 
 namespace VisualStudioTranslator.Google
 {
@@ -92,7 +90,7 @@ namespace VisualStudioTranslator.Google
         /// <param name="from"></param>
         /// <param name="to"></param>
         /// <returns></returns>
-        private GoogleTransResult TranslateByHttp(string text, string from = "en", string to = "zh-CN")
+        private GoogleTransResult TranslateByHttp(string text, string from = "en", string to = "ru")
         {
             if (!(text.Length > 0 && text.Length < 5000))
             {
@@ -161,11 +159,6 @@ namespace VisualStudioTranslator.Google
         {
             return "Google Translator";
         }
-        public static string GetChineseLanguage()
-        {
-            return "zh-CN";
-        }
-
 
         public static string GetDescription()
         {
@@ -203,7 +196,7 @@ namespace VisualStudioTranslator.Google
         /// <param name="from"></param>
         /// <param name="to"></param>
         /// <returns></returns>
-        public TranslationResult Translate(string text, string @from = "en", string to = "zh-CN")
+        public TranslationResult Translate(string text, string @from = "en", string to = "ru")
         {
             TranslationResult result = new TranslationResult()
             {

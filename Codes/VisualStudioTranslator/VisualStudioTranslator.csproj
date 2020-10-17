@@ -88,7 +88,6 @@
     <Compile Include="Google\GoogleTranslator.cs" />
     <Compile Include="Google\GoogleUtils.cs" />
     <Compile Include="ITranslator.cs" />
-    <Compile Include="TextToSpeech.cs" />
     <Compile Include="Utils\Encrypts.cs" />
     <Compile Include="Utils\HttpHelper.cs" />
     <Compile Include="Utils\Times.cs" />

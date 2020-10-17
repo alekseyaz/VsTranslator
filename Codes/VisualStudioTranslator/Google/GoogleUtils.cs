@@ -4,8 +4,8 @@ using System.Text;
 namespace VisualStudioTranslator.Google
 {
     /// <summary>
-    /// 版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
-    /// 本文链接：https://blog.csdn.net/u013070165/article/details/85096834
+    /// Copyright statement: This article is the original article of the blogger and follows the CC 4.0 BY-SA copyright agreement. Please attach the original source link and this statement for reprinting。
+    /// Link to this article：https://blog.csdn.net/u013070165/article/details/85096834
     /// </summary>
     internal class GoogleUtils
     {
@@ -49,20 +49,20 @@ namespace VisualStudioTranslator.Google
             return a.ToString();
         }
 
-        //实现js的charAt方法
+        //Implement the charAt method of js
         internal static char CharAt(object obj, int index)
         {
             char[] chars = obj.ToString().ToCharArray();
             return chars[index];
         }
-        //实现js的charCodeAt方法
+        //Implement the charCodeAt method of js
         internal static int CharCodeAt(object obj, int index)
         {
             char[] chars = obj.ToString().ToCharArray();
             return (int)chars[index];
         }
 
-        //实现js的Number方法
+        //Implement the Number method of js
         internal static int Number(object cc)
         {
             try
