@@ -32,10 +32,11 @@ namespace VisualStudioTranslator.Settings
             grid.DataContext = Settings;
 
 
-            cbService.Items.Add(GoogleTranslator.GetName());
-            //cbService.Items.Add(BingTranslator.GetName());
-            //cbService.Items.Add(BaiduTranslator.GetName());
-            //cbService.Items.Add(YoudaoTranslator.GetName());
+            cbSourceLanguage.Items.Clear();
+            cbTargetLanguage.Items.Clear();
+            AppendLang2Control(GoogleTranslator.GetSourceLanguages(), GoogleTranslator.GetTargetLanguages());
+            SetLanguageSelectedIndex(Settings.GoogleSettings);
+
         }
 
 
@@ -59,37 +60,6 @@ namespace VisualStudioTranslator.Settings
         {
             new LetterSpliter(OptionsSettings.Settings.LetterSpliters) { Owner = this, ShowInTaskbar = false }.ShowDialog();
         }
-
-        /// <summary>
-        /// When the translate service was changed, to set source language, target language and last language 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void cbService_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            cbSourceLanguage.Items.Clear();
-            cbTargetLanguage.Items.Clear();
-            switch (cbService.SelectedIndex)
-            {
-                case 0:
-                    AppendLang2Control(GoogleTranslator.GetSourceLanguages(), GoogleTranslator.GetTargetLanguages());
-                    SetLanguageSelectedIndex(Settings.GoogleSettings);
-                    break;
-                //case 1:
-                //    AppendLang2Control(BingTranslator.GetSourceLanguages(), BingTranslator.GetTargetLanguages());
-                //    SetLanguageSelectedIndex(Settings.BingSettings);
-                //    break;
-                //case 2:
-                //    AppendLang2Control(BaiduTranslator.GetSourceLanguages(), BaiduTranslator.GetTargetLanguages());
-                //    SetLanguageSelectedIndex(Settings.BaiduSettings);
-                //    break;
-                //case 3:
-                //    AppendLang2Control(YoudaoTranslator.GetSourceLanguages(), YoudaoTranslator.GetTargetLanguages());
-                //    SetLanguageSelectedIndex(Settings.YoudaoSettings);
-                //    break;
-            }
-        }
-
 
         private void SetLanguageSelectedIndex(TransSettings transSettings)
         {
@@ -136,23 +106,7 @@ namespace VisualStudioTranslator.Settings
 
         private TransSettings GetTransSettings()
         {
-            TransSettings transSettings = null;
-            switch (cbService.SelectedIndex)
-            {
-                case 0:
-                    transSettings = Settings.GoogleSettings;
-                    break;
-                //case 1:
-                //    transSettings = Settings.BingSettings;
-                //    break;
-                //case 2:
-                //    transSettings = Settings.BaiduSettings;
-                //    break;
-                //case 3:
-                //    transSettings = Settings.YoudaoSettings;
-                //    break;
-            }
-            return transSettings;
+            return Settings.GoogleSettings;
         }
 
         private void cbSourceLanguage_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -168,19 +122,6 @@ namespace VisualStudioTranslator.Settings
                 transSettings.SourceLanguageIndex = cbSourceLanguage.SelectedIndex;
             }
         }
-
-        //private void cbLastLanguage_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //    SetLastLanguageIndex(GetTransSettings());
-        //}
-
-        //private void SetLastLanguageIndex(TransSettings transSettings)
-        //{
-        //    if (cbLastLanguage.SelectedIndex != transSettings.LastLanguageIndex && cbLastLanguage.SelectedIndex != -1)
-        //    {
-        //        transSettings.LastLanguageIndex = cbLastLanguage.SelectedIndex;
-        //    }
-        //}
 
         private void cbAutoTranslate_Checked(object sender, RoutedEventArgs e)
         {

@@ -13,12 +13,6 @@ namespace VisualStudioTranslator.Settings
 
         public TransSettings GoogleSettings { get; set; }
 
-        //public TransSettings BingSettings { get; set; }
-
-        //public TransSettings BaiduSettings { get; set; }
-
-        //public TransSettings YoudaoSettings { get; set; }
-
         public List<Spliter> LetterSpliters { get; set; }
 
         /// <summary>
@@ -26,10 +20,7 @@ namespace VisualStudioTranslator.Settings
         /// </summary>
         public bool IsAutoTranslate { get; set; } = false;
 
-        //public bool IsEnabledFirstJudgeChinese { get; set; } = false;
-
         public int DelayMilliOfAutoTranslate { get; set; } = 300;
-
 
         public bool AfterTranslateSuccessedAutoCopy { get; set; } = true;
 
@@ -46,35 +37,8 @@ namespace VisualStudioTranslator.Settings
             return new Settings()
             {
                 ServiceIndex = 1,
-                //BaiduSettings = new TransSettings()
-                //{
-                //    AppClient = new AppClient() { AppKey = "", ClientSecret = "" },
-                //    LastLanguageIndex = 2,
-                //    SourceLanguageIndex = 0,
-                //    TargetLanguageIndex = 0
-                //},
-                //BingSettings = new TransSettings()
-                //{
-                //    AppClient = new AppClient()
-                //    {
-                //        AppKey = "",
-                //        ClientSecret = ""
-                //    },
-                //    LastLanguageIndex = 12,
-                //    SourceLanguageIndex = 0,
-                //    TargetLanguageIndex = 5
-                //}
-                //    ,
-                //YoudaoSettings = new TransSettings()
-                //{
-                //    AppClient = new AppClient() { AppKey = "", ClientSecret = "" },
-                //    LastLanguageIndex = 1,
-                //    SourceLanguageIndex = 0,
-                //    TargetLanguageIndex = 0
-                //},
                 GoogleSettings = new TransSettings()
                 {
-                    LastLanguageIndex = 12,
                     SourceLanguageIndex = 0,
                     TargetLanguageIndex = 6
                 },
@@ -102,10 +66,8 @@ namespace VisualStudioTranslator.Settings
     public class TransSettings
     {
         public int SourceLanguageIndex { get; set; }
-
         public int TargetLanguageIndex { get; set; }
 
-        public int LastLanguageIndex { get; set; }
     }
 
     public class Spliter

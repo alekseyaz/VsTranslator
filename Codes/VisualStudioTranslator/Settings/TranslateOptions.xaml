@@ -19,12 +19,9 @@
             <ColumnDefinition Width="Auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0">
-            <GroupBox x:Name="groupBox" Header="Translate Service" HorizontalAlignment="Left" Margin="20,5" VerticalAlignment="Top" Padding="15,3,15,3">
+            <GroupBox x:Name="groupBox" Header="Google Translate Service" HorizontalAlignment="Left" Margin="20,5" VerticalAlignment="Top" Padding="15,3,15,3">
                 <DockPanel>
-                    <WrapPanel Margin="5" DockPanel.Dock="Top">
-                        <TextBlock VerticalAlignment="Center" MinWidth="100">Translate Service</TextBlock>
-                        <ComboBox Name="cbService" Width="200" Margin="20,0,0,0" SelectionChanged="cbService_OnSelectionChanged" SelectedIndex="{Binding Path=ServiceIndex, Mode=TwoWay}"></ComboBox>
-                    </WrapPanel>
+                    <WrapPanel Margin="5" DockPanel.Dock="Top"/>
                     <WrapPanel Margin="5" DockPanel.Dock="Top">
                         <TextBlock VerticalAlignment="Center" MinWidth="100">Translate from</TextBlock>
                         <ComboBox Name="cbSourceLanguage" Width="200" Margin="20,0,0,0" SelectionChanged="cbSourceLanguage_OnSelectionChanged"></ComboBox>

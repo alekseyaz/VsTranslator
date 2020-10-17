@@ -50,10 +50,7 @@ namespace VisualStudioTranslator.Settings
                     try
                     {
                         _settings = JsonConvert.DeserializeObject<Settings>(settings);
-                        //if (_settings.BaiduSettings == null) _settings.BaiduSettings = new TransSettings();
                         if (_settings.GoogleSettings == null) _settings.GoogleSettings = new TransSettings();
-                        //if (_settings.BingSettings == null) _settings.BingSettings = new TransSettings();
-                        //if (_settings.YoudaoSettings == null) _settings.YoudaoSettings = new TransSettings();
                         if (_settings.LetterSpliters == null) _settings.LetterSpliters = new List<Spliter>();
                     }
                     catch (Exception)
